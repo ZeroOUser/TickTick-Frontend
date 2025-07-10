@@ -781,7 +781,7 @@ footer {
     text-transform: capitalize;
     font-size: var(--fs-base);
     color: var(--clr-300);
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 .link-container {
     position: relative;
