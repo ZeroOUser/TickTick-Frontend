@@ -772,7 +772,7 @@ section .card {
 }
 
 
-
+/* FIXME responsive footer */
 /* footer */
 footer {
     display: grid;
@@ -781,6 +781,7 @@ footer {
     text-transform: capitalize;
     font-size: var(--fs-base);
     color: var(--clr-300);
+    overflow-x: scroll;
 }
 .link-container {
     position: relative;
