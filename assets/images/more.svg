@@ -1,0 +1,11 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="icon-more-sidebar w-[16px] h-[16px] cursor-pointer transform text-sidebar-color opacity-40 hover:opacity-100" width="24"  height="24" >
+    <defs>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="more-sidebar" fill="#191919">
+            <g fill-rule="evenodd" fill="#191919">
+                <path fill="none" d="M0 0H24V24H0z"></path>
+                <path d="M4,10 C5.1045695,10 6,10.8954305 6,12 C6,13.1045695 5.1045695,14 4,14 C2.8954305,14 2,13.1045695 2,12 C2,10.8954305 2.8954305,10 4,10 Z M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M20,10 C21.1045695,10 22,10.8954305 22,12 C22,13.1045695 21.1045695,14 20,14 C18.8954305,14 18,13.1045695 18,12 C18,10.8954305 18.8954305,10 20,10 Z" fill="#191919"></path>
+            </g>
+        </symbol>
+    </defs>
+    <use xlink:href="#more-sidebar"></use>
+</svg>

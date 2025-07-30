@@ -1,0 +1,229 @@
+
+/* Global Vars */
+:root {
+    --ff-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+    --clr-background: #F9F9F9;
+    --clr-100: #fff;
+    --clr-200: #cececeda;
+    --clr-300: #5e6161;
+    --clr-350: #424446;
+    --clr-400: #6C8EFB;
+    --clr-700: rgb(71, 114, 250);
+    --clr-800: rgb(52, 86, 197);
+    --clr-900: #000;
+
+    --br-base: 1.125vw;
+    --br-btn: 32px;
+    --br-card: 16px;
+    @media (width <= 1000px) {
+        --br-base: 2.1vw;
+    }
+    @media (width <= 480px) {
+        --br-card: 8px;
+    }
+
+    --fs-base: 1rem;
+    --fs-100: 1.125rem;
+    --fs-200: 1.25rem;
+    --fs-400: 1.625rem;
+    --fs-700: 2.25rem;
+    --fs-800: 2.5rem;
+    --fs-900: 3.35rem;
+    @media (width <= 1024px) {
+        --fs-100: 0.875rem;
+    }
+    @media (width <= 768px) {
+        --fs-700: 2rem;
+    }
+    @media (width <= 480px) {
+        --fs-100: 0.75rem;
+        --fs-400: 0.875rem;
+        --fs-700: 1.5rem;
+    }
+
+    --gap-primary: 140px;
+    --m-primary: 140px;
+    --gap-grid: 60px;
+    --gap-card: 20px;
+    @media (width <= 768px) {
+        --m-primary: 80px;
+        --gap-grid: 40px;
+    }
+}
+/* ************************************************** */
+
+
+/* Reset */
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font: inherit;
+    color: inherit;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+svg, img, picture, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    /* aspect-ratio: 1 / 1; */
+}
+svg {
+    aspect-ratio: 1 / 1;
+    fill: inherit;
+}
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* ************************************************** */
+
+
+/* General Styling */
+body {
+    background-color: var(--clr-background);
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    line-height: 1.6;
+    color: var(--clr-350);
+    fill: var(--clr-700);
+}
+h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  line-height: 1.33;
+}
+h1 {
+    line-height: 1.2;
+}
+li a:is(:hover, :focus-visible) {
+    color: var(--clr-700);
+}
+button {
+    text-transform: capitalize;
+    border-radius: var(--br-btn);
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    border: none;
+    outline: none;
+    padding: .3em 1.8em;
+}
+button:active {
+    outline: none;
+}
+button.transparent {
+    background-color: transparent !important;
+}
+button.transparent:active {
+    background-color: var(--clr-200) !important;
+}
+
+
+/* section */
+section {
+    display: grid;
+    gap: var(--gap-grid);
+    
+}
+/* **************************************** */
+
+
+
+
+/* Utility Classes */
+.subheading {
+    display: grid;
+    text-align: center;
+    font-size: 2em;
+    font-weight: var(--fw-bold);
+    color: var(--clr-900);
+}
+.card {
+    background-color: transparent;
+    border-radius: var(--br-card);
+    -webkit-box-shadow: 0 6px 24px 0 rgb(11 32 96 / 10%);
+    box-shadow: 0 6px 24px 0 rgb(11 32 96 / 10%);
+    overflow: hidden;
+}
+.hidden {
+    display: none !important;
+}
+.visually-hidden {
+    opacity: 0;
+}
+.highlight {
+    color: var(--clr-700);
+}
+.wrapper {
+    width: min(1200px, 90%);
+    margin-inline: auto;
+}
+.full-wrapper {
+    width: min(1200px, 100%);
+    margin-inline: auto;
+}
+.flex-flow { 
+    display: flex;
+    gap: var(--flex-flow-gap, 16px);
+}
+.flex-flow[justify-content="space-between"] {
+    justify-content: space-between;
+}
+.dir-col {
+    flex-direction: column;
+    align-items: center;
+    gap: calc(1em + 0.5vw);
+}
+.group-mb140 > * {
+    margin-bottom: var(--m-primary);
+}
+.bg-100 {
+    background-color: var(--clr-100);
+}
+.active-highlight {
+    color: #4772fa !important;
+    background-color: rgba(71, 114, 250, .1) !important;
+}
+.active-highlight svg {
+    fill: #4772fa !important;
+}
+
+
+
+
+
+/* Animations */
+@keyframes show-header {
+    100% {
+        background-color: #fff;
+    }
+}

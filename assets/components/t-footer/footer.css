@@ -1,0 +1,100 @@
+t-footer {
+    --spacing-1: 40px;
+    --spacing-2: 80px;
+    --spacing-3: 100px;
+    display: grid;
+    gap: var(--spacing-1);
+    padding-block: var(--spacing-3) var(--spacing-1);
+    text-transform: capitalize;
+    font-size: var(--fs-base);
+    color: var(--clr-300);
+    overflow: hidden;
+    @media (width <= 798px) {
+        --fs-base: 0.875rem;
+    }
+    @media (width <= 480px) {
+        --spacing-1: 24px;
+        --spacing-2: 24px;
+        --spacing-3: 20px;
+    }
+}
+t-footer .container {
+    position: relative;
+    display: flex;
+    padding-block-end: var(--spacing-2);
+    row-gap: 24px;
+    @media (width <= 600px) {
+        flex-direction: column-reverse;
+    }
+    
+}
+t-footer .link-container {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 24px;
+}
+t-footer .link-container > * {
+    flex: 0 1 202px;
+    @media (width <= 480px) {
+        flex: 0 1 50%;
+    }
+}
+t-footer .container .category {
+    display: flex;
+    flex-direction: column;
+    gap: var(--fs-200);
+    @media (width <= 798px) {
+        gap: 0.675rem;
+    }
+}
+t-footer .container .social {
+    @media (width <= 600px) {
+        flex-direction: row;
+        align-items: center;
+        .lang-picker {
+            flex: 1;
+        }
+    }
+}
+t-footer .link-container .title {
+    font-size: 1rem;
+    font-weight: var(--fw-semi-bold);
+}
+t-footer .category ul {
+    display: grid;
+    gap: var(--fs-base);
+    list-style: none;
+}
+t-footer .social > ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 3px;
+}
+t-footer a:is(:hover, :focus-visible) {
+    color: inherit;
+    text-decoration: underline;
+}
+t-footer .container:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr-200);
+    bottom: 0;
+}
+t-footer select {
+    border: 1px solid var(--clr-200);
+    padding-block: 8px;
+    outline: none;
+    border-radius: 6px;
+    background-color: transparent;
+    cursor: pointer;
+}
+t-footer .lang-picker {
+    width: 150px;
+}
+t-footer .icons img {
+    max-width: 30px;
+}

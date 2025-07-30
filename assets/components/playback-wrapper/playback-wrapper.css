@@ -1,0 +1,40 @@
+playback-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.33em;
+    padding-block: 1.33em;
+}
+playback-wrapper img {
+    align-self: stretch;
+    background-color: var(--clr-background);
+    width: 60%;
+    object-fit: cover;
+    object-position: right;
+    @media (width <= 1024px) {
+        width: 100%;
+    }
+}
+playback-wrapper .text {
+    flex: 1 0 0;
+    display: grid;
+    gap: 1.11em;
+    margin-inline: 0 3.44em;
+    @media (width <= 1024px) {
+        display: none;
+    }
+}
+playback-wrapper .title {
+    font-size: 1.44em;
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-900);
+}
+playback-wrapper .advs {
+    list-style-image: url(../../images/checked.svg);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.67em;
+    padding-inline-start: 1.33em;
+}

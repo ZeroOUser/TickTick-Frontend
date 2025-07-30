@@ -1,0 +1,83 @@
+
+feature-card {
+    position: relative;
+    z-index: 0;
+    /* contain: layout paint; */
+}
+feature-card .__cover {
+    border-radius: var(--br-card);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    @media (width <= 768px) {
+        display: none;
+    }
+}
+/* TODO refactoring */
+feature-card .__body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column dense;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    @media (width <= 768px) {
+        position: relative;
+        grid-auto-flow: row dense;
+    }
+}
+/* *************** */
+feature-card img {
+    border-radius: var(--br-card);
+    border-top-left-radius: none;
+    border-top-right-radius: none;
+    @media (width > 768px) {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+feature-card .__text {
+    padding-inline: 15%;
+    display: grid;
+    gap: var(--fs-100);
+    font-size: var(--fs-100);
+    @media (width <= 1024px) {
+        --fs-100: 1rem;
+        --fs-700: 2rem;
+    }
+    @media (width <= 900px) {
+        --fs-base: 0.75rem;
+        --fs-700: 1.5rem;
+        --fs-100: 0.75rem;
+        
+    }
+    @media (width <= 768px) {
+        --fs-base: 0.75rem;
+        --fs-700: 1.25rem;
+        --fs-100: 0.75rem;
+        padding: 15px 24px 0;
+        gap: 6px;
+    }
+}
+feature-card[reverse-flow] img {
+    grid-column: -1;
+}
+feature-card .__name {
+    color: var(--clr-700);
+    font-size: var(--fs-base);
+    text-transform: capitalize;
+}
+feature-card .__title {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+    color: var(--clr-900);
+    letter-spacing: 1px;
+    @media (width <= 768px) {
+        letter-spacing: 0.5px;
+    }
+    
+}
